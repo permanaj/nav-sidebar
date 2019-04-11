@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Nav Sidebar</title>
+
+	<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="dist/css/jquery.nav-sidebar.css" rel="stylesheet">
+
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.nav-sidebar.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.sidebar').appSidebar({
+				collapseTrigger: '#toggle-nav-sidebar'
+			});
+			feather.replace();
+        });
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul aria-orientation="vertical" class="nav flex-column">
+            <li class="nav-item border-bottom pt-2 mb-2 nav-item-workspace">
+                <a aria-expanded="false" class="nav-link collapsed" data-toggle="collapse" href="#select-workspace">
+                    <span class="icon">
+                        <i class="fe fe-briefcase" data-feather="briefcase"></i>
+                    </span>
+                    <span class="text">Workspace 1</span>
+                </a>
+                <div class="collapse nav-collapse wrapper" id="select-workspace">
+                    <ul class="nav flex-column list-unstyled">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item pl-7 active" href="#workspace-1">Workspace 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item pl-7" href="#workspace-1">Workspace 2</a>
+                        </li>
+                        <li class="nav-item border-top">
+                            <a class="nav-link dropdown-item pl-7" href="#workspace-1">Manage workspace</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+			<li class="nav-item">
+				<a aria-expanded="false" class="nav-link collapsed" data-toggle="collapse" href="#subpage-pages">
+					<span class="icon">
+						<i class="fe fe-file" data-feather="file"></i>
+					</span>
+					<span class="text">Pages</span>
+				</a>
+
+				<div class="collapse nav-collapse-wrapper" id="subpage-pages">
+					<ul class="nav flex-column list-unstyled">
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./profile.html">Profile</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./login.html">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./register.html">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./forgot-password.html">Forgot password</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./400.html">400 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./401.html">401 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./403.html">403 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./404.html">404 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./500.html">500 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./503.html">503 error</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./email.html">Email</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./empty.html">Empty page</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./rtl.html">RTL mode</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 " href="./dashboard-alt.html">Dashboard alternative</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-item pl-7 active" href="./sidebar.html">Sidebar</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+        </ul>
+    </div>
+    <div class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col my-2">
+					<button class="btn btn-primary" type="button" id="toggle-nav-sidebar">
+						Toggle navigation
+					</button>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas sagittis arcu feugiat tincidunt. Proin non vehicula magna. In eu tristique neque, nec consectetur risus. Pellentesque nec lorem vel nisl rutrum mattis. Sed a pulvinar lectus. Donec vel lectus a augue molestie venenatis. Aliquam erat volutpat. Suspendisse porta accumsan eros ut pretium.</p>
+					<p>Praesent eu erat venenatis magna consequat porttitor eu eget nisl. Vivamus nec nisi et arcu dictum commodo ac at libero. Fusce molestie commodo pellentesque. Aenean at condimentum massa. Quisque quis tortor felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut bibendum congue pellentesque. Nullam tristique ante sed quam sodales, nec rhoncus lacus iaculis. Proin sit amet mauris eu eros dictum sollicitudin. Quisque malesuada sem eget augue lacinia imperdiet.</p>
+					<p>Sed commodo egestas ultrices. Cras sed venenatis est. Integer ultricies vitae nibh at ultricies. Sed sed venenatis urna. Proin ullamcorper rutrum ex, sit amet dictum diam mattis ut. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer est augue, auctor ac tellus ut, finibus interdum urna. Curabitur placerat libero tellus, eu fermentum sapien finibus pretium. Donec ut lorem porta, suscipit orci mollis, auctor ante. Nulla blandit volutpat diam id maximus. Maecenas ac turpis egestas odio vehicula scelerisque at non mauris. Morbi porttitor ligula a purus convallis, ac porta ante congue. Nunc et lectus eget nisl mollis ultrices. Aenean sollicitudin efficitur scelerisque. Quisque quis nisl ipsum.</p>
+					<p>Aenean elementum, mi vel porttitor vestibulum, nisl nibh lacinia erat, vitae efficitur nulla justo sed lacus. Duis vitae dui sit amet quam pellentesque euismod. Nulla lectus nisl, commodo vel arcu id, commodo efficitur purus. Vivamus congue, sem eget sagittis aliquet, sem augue iaculis mi, vitae laoreet felis risus dapibus urna. In gravida tortor at justo scelerisque sagittis. Duis mollis, lorem vitae mollis interdum, est urna ullamcorper libero, nec commodo lorem eros id turpis. Suspendisse quis lectus quis eros egestas eleifend. Ut eu tempus justo. Etiam in hendrerit lorem, ut maximus ex. Duis porta sed justo quis laoreet. Sed sed tortor ultricies, auctor dolor eu, iaculis augue. Sed malesuada nulla id mi pulvinar, eu rhoncus ipsum mollis. Cras sodales, sem nec efficitur eleifend, mauris libero eleifend lorem, a dignissim mauris sem sit amet justo. Duis convallis a odio a congue. Proin eu turpis tellus.</p>
+					<p>Nam semper dui non commodo interdum. Aenean magna mauris, interdum id orci interdum, varius dictum mauris. Suspendisse non fermentum ligula. Vestibulum in porta libero. Duis finibus tristique tortor. Aliquam erat volutpat. Nullam aliquet nisl vel consectetur convallis. Cras facilisis porta risus nec malesuada. Morbi feugiat tortor velit, sed bibendum magna gravida sit amet. Vestibulum sit amet sapien justo. Etiam vestibulum enim ligula, id varius massa tincidunt eu. Ut hendrerit euismod erat et tincidunt. Aenean vitae leo eget odio commodo placerat. Maecenas ac imperdiet enim. Pellentesque metus velit, elementum a nibh vel, mollis molestie nisi.</p>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+
+</html>

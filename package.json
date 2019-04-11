@@ -1,0 +1,26 @@
+{
+  "name": "nav-sidebar",
+  "version": "1.0.0",
+  "description": "jQuery Navigation Sidebar",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Permana Jayanta",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {}
+}

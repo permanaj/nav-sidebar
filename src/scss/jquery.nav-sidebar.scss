@@ -1,0 +1,61 @@
+$sidebar-width: 15rem;
+$sidebar-width-collapsed: 3rem;
+
+.ns-sidebar {
+	transition: all 0.2s ease-in-out;
+	height: 100%;
+    z-index: 1;
+	background: white;
+	position: fixed;
+	width: $sidebar-width;
+
+	.ns-sidebar-inner {
+		overflow: hidden;
+		position: fixed;
+		width: $sidebar-width;
+	}
+
+	// Styling for nav sidebar state
+	// -----------------------------
+	&.ns-sidebar-expanded {
+		width: $sidebar-width;
+
+		.ns-sidebar-inner {
+			width: $sidebar-width;
+		}
+
+		.nav-link .text {
+			display: initial;
+		}
+	}
+	&.ns-sidebar-collapsed {
+		width: $sidebar-width-collapsed;
+
+		.ns-sidebar-inner {
+			width: $sidebar-width-collapsed;
+		}
+
+		.nav-link .text {
+			display: none;
+		}
+	}
+}
+
+.ns-main {
+	// By default, sidebar is expanded.
+	margin-left: $sidebar-width ;
+
+	// When sidebar is collapsed, main is expanded.
+	&.ns-main-expanded {
+		margin-left: $sidebar-width-collapsed;
+	}
+
+	// When sidebar is expanded, main is collapsed.
+	&.ns-main-collapsed {
+		margin-left: $sidebar-width ;
+	}
+}
+
+.nav-link span.text {
+    white-space: nowrap;
+}
